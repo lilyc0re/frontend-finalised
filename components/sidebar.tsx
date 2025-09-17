@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Home, BarChart3, Upload, MessageSquare, Settings, LogOut } from "lucide-react"
+import Image from "next/image"
 
 interface SidebarProps {
   onLogout: () => void
@@ -42,8 +43,14 @@ export function Sidebar({ onLogout, onNavigate }: SidebarProps) {
       >
         {/* Logo Section */}
         <div className="p-6 border-b border-blue-200">
-          <div className="w-12 h-12 bg-blue-300 rounded-lg flex items-center justify-center">
-            <span className="text-blue-700 font-semibold text-lg">Logo</span>
+          <div className="flex items-center justify-center">
+            <Image
+              src="/images/lexalytics-logo.png"
+              alt="Lexalytics Logo"
+              width={120}
+              height={120}
+              className="object-contain"
+            />
           </div>
         </div>
 

@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import Image from "next/image"
 import { Search, HelpCircle, X } from "lucide-react"
 import { useState } from "react"
 
@@ -28,12 +28,20 @@ export function Header({ username = "John Doe" }: HeaderProps) {
     <>
       <header className="bg-blue-100 border-b border-blue-200 px-6 py-4 relative z-40">
         <div className="flex items-center justify-between">
-          {/* Left side - Empty for spacing */}
-          <div className="w-32"></div>
+          {/* Left side - Lexalytics logo */}
+          <div className="flex items-center">
+            <Image
+              src="/images/lexalytics-logo.png"
+              alt="Lexalytics Logo"
+              width={120}
+              height={60}
+              className="h-12 w-auto"
+            />
+          </div>
 
           {/* Center - Title */}
           <h1 className="text-xl font-semibold text-blue-900 absolute left-1/2 transform -translate-x-1/2">
-            Lexalytics - Sentiment Analysis
+            Sentiment Analysis Dashboard
           </h1>
 
           {/* Right side - Icons and Username */}
